@@ -31,6 +31,8 @@ void array_new_test(){
 
 void array_add_test(){
     Array *arr;
+    arr = array_new();
+
     array_add(arr, 0 , 3);
     assert( *(arr->data) == 3 );
     assert( (arr->size) == 1 );
@@ -69,6 +71,8 @@ void array_add_test(){
 
 void array_get_test(){
     Array *arr;
+    arr = array_new();
+
     array_add(arr,0,1);
     array_add(arr,1,2);
     array_add(arr,2,3);
