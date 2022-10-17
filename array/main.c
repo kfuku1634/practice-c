@@ -33,24 +33,30 @@ void array_add_test(){
 
     array_add(arr, 0 , 1);
     assert( *(arr->data) == 1 );
-    assert( *((arr->data+1)) == 3 );
+    assert( *((arr->data)+1) == 3 );
     assert( (arr->size) == 2 );
     assert( (arr->capacity) == 5 );
 
     array_add(arr, 0 , 4);
+    assert( *(arr->data) == 4 );
+    assert( *((arr->data)+1) == 1 );
+    assert( *((arr->data)+2) == 3 );
+    assert( (arr->size) == 3 );
+    assert( (arr->capacity) == 5 );
+
     array_add(arr, 2 , 2);
     array_add(arr, 1 , 5);
-    assert( *(arr->data    ) == 4 );
-    assert( *((arr->data+1)) == 5 );
-    assert( *((arr->data+2)) == 1 );
-    assert( *((arr->data+3)) == 2 );
-    assert( *((arr->data+4)) == 3 );
+    assert( *( arr->data   ) == 4 );
+    assert( *((arr->data)+1) == 5 );
+    assert( *((arr->data)+2) == 1 );
+    assert( *((arr->data)+3) == 2 );
+    assert( *((arr->data)+4) == 3 );
     assert( (arr->size) == 5 );
     assert( (arr->capacity) == 5 );
 
     array_add(arr, 0 , 10);
     assert( (arr->size) == 6 );
-    assert( (arr->capacity) == 12 );
+    assert( (arr->capacity) == 10 );
 
     return;
 }
