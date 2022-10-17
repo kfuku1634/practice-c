@@ -7,7 +7,7 @@ typedef struct MyQueue {
     int *data;
 }Queue;
 
-Queue *queue_new(){
+Queue *queue_array_new(){
     Queue *queue;
     queue = malloc(sizeof(Queue));
     queue->j = 0;

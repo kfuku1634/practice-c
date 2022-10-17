@@ -17,7 +17,7 @@ void run_test(){
 
 void run_new_test(){
     Queue *queue;
-    queue = queue_new();
+    queue = queue_array_new();
 
     assert( queue->j == 0 );
     assert( queue->size == 0 );
