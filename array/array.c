@@ -42,3 +42,7 @@ void array_add(Array *arr, int i, int x){
 int array_get(Array *arr, int i){
     return *((arr->data)+i);
 }
+
+int array_set(Array *arr, int i, int x){
+    return 0;
+}

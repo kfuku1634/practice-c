@@ -7,6 +7,7 @@ void run_all_test();
 void array_new_test();
 void array_add_test();
 void array_get_test();
+void array_set_test();
 
 int main(int argc, char* argv[]) {
     run_all_test();
@@ -17,6 +18,7 @@ void run_all_test(){
     array_new_test();
     array_add_test();
     array_get_test();
+    array_set_test();
 }
 
 void array_new_test(){
@@ -86,6 +88,25 @@ void array_get_test(){
     assert(array_get(arr, 3) == 4 );
     assert(array_get(arr, 4) == 5 );
     assert(array_get(arr, 5) == 6 );
+
+    free(arr);
+    return;
+}
+
+void array_set_test(){
+    Array *arr;
+    arr = array_new();
+
+    array_add(arr,0,1);
+    array_add(arr,1,2);
+    array_add(arr,2,3);
+    array_add(arr,3,4);
+    array_add(arr,4,5);
+    array_add(arr,5,6);
+
+    assert(array_set(arr,1,11) == 2 );
+    assert(array_set(arr,1,5)  == 11 );
+    assert(array_set(arr,5,10) == 6 );
 
     free(arr);
     return;
