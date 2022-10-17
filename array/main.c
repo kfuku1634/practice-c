@@ -24,6 +24,8 @@ void array_new_test(){
     arr = array_new();
     assert( arr->size == 0);
     assert( arr->capacity == 5);
+
+    free(arr);
     return;
 }
 
@@ -61,6 +63,7 @@ void array_add_test(){
     assert( (arr->size) == 6 );
     assert( (arr->capacity) == 10 );
 
+    free(arr);
     return;
 }
 
@@ -80,5 +83,5 @@ void array_get_test(){
     assert(array_get(arr, 4) == 5 );
     assert(array_get(arr, 5) == 6 );
 
-
+    free(arr);
 }
