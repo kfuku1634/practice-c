@@ -24,6 +24,7 @@ void array_new_test(){
     arr = array_new();
     assert( arr->size == 0);
     assert( arr->capacity == 5);
+    return;
 }
 
 void array_add_test(){
