@@ -44,5 +44,8 @@ int array_get(Array *arr, int i){
 }
 
 int array_set(Array *arr, int i, int x){
-    return 0;
+    int ret;
+    ret = *((arr->data)+i);
+    *((arr->data)+i) = x;
+    return ret;
 }
