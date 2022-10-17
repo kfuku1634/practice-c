@@ -49,3 +49,16 @@ int array_set(Array *arr, int i, int x){
     *((arr->data)+i) = x;
     return ret;
 }
+
+
+int array_remove(Array *arr, int i){
+    int ret;
+    ret = *((arr->data)+i);
+    memmove( (arr->data)+i, (arr->data)+i+1, ((arr->size)-i) * sizeof(int) );
+    arr->size -= 1;
+
+    if ( (arr->capacity) >= (arr->size) * 3 ){
+        array_resize(arr);
+    }
+    return ret;
+}
