@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include "array.c"
 
 void run_all_test();
@@ -17,8 +18,6 @@ void run_all_test(){
 void array_new_test(){
     Array *arr;
     arr = array_new();
-    printf("%p\n",arr);
-    printf("%d\n",arr->size);
-    printf("%d\n",arr->capacity);
-    printf("%p\n",arr->data);
+    assert( arr->size == 0);
+    assert( arr->capacity == 5);
 }
