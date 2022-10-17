@@ -84,4 +84,5 @@ void array_get_test(){
     assert(array_get(arr, 5) == 6 );
 
     free(arr);
+    return;
 }
