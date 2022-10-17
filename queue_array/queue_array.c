@@ -41,3 +41,13 @@ void queue_array_add( Queue *queue, int x ){
     *( (queue->data) + add_pos ) = x;
     queue->size +=1;
 }
+
+int queue_array_remove(Queue *queue ){
+    int res;
+    if ( queue->size == 0 ){ return EXIT_FAILURE; }
+    res = *((queue->data)+queue->start);
+    queue->start += 1;
+    queue->size -= 1;
+
+    return res;
+}

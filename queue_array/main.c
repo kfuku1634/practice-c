@@ -6,6 +6,7 @@
 void run_test();
 void run_new_test();
 void run_add_test();
+void run_remove_test();
 
 int main(int argc, char* argv[]) {
     run_test(); 
@@ -15,6 +16,7 @@ int main(int argc, char* argv[]) {
 void run_test(){
     run_new_test();
     run_add_test();
+    run_remove_test();
 }
 
 void run_new_test(){
@@ -44,4 +46,21 @@ void run_add_test(){
     queue_destroy(queue);
 
     return;
+}
+
+void run_remove_test(){
+    Queue *queue;
+    queue = queue_array_new();
+
+    queue_array_add(queue, 1);
+    queue_array_add(queue, 2);
+    queue_array_add(queue, 3);
+    queue_array_add(queue, 4);
+
+    assert( queue_array_remove(queue) == 1 );
+    assert( queue_array_remove(queue) == 2 );
+    assert( queue_array_remove(queue) == 3 );
+    assert( queue_array_remove(queue) == 4 );
+
+    queue_destroy(queue);
 }
