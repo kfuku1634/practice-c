@@ -6,6 +6,7 @@
 void run_all_test();
 void array_new_test();
 void array_add_test();
+void array_get_test();
 
 int main(int argc, char* argv[]) {
     run_all_test();
@@ -15,6 +16,7 @@ int main(int argc, char* argv[]) {
 void run_all_test(){
     array_new_test();
     array_add_test();
+    array_get_test();
 }
 
 void array_new_test(){
@@ -59,4 +61,23 @@ void array_add_test(){
     assert( (arr->capacity) == 10 );
 
     return;
+}
+
+void array_get_test(){
+    Array *arr;
+    array_add(arr,0,1);
+    array_add(arr,1,2);
+    array_add(arr,2,3);
+    array_add(arr,3,4);
+    array_add(arr,4,5);
+    array_add(arr,5,6);
+
+    assert(array_get(arr, 0) == 1 );
+    assert(array_get(arr, 1) == 2 );
+    assert(array_get(arr, 2) == 3 );
+    assert(array_get(arr, 3) == 4 );
+    assert(array_get(arr, 4) == 5 );
+    assert(array_get(arr, 5) == 6 );
+
+
 }

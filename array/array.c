@@ -38,3 +38,7 @@ void array_add(Array *arr, int i, int x){
     arr->size += 1;
     return;
 }
+
+int array_get(Array *arr, int i){
+    return *((arr->data)+i);
+}
