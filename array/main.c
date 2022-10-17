@@ -19,5 +19,6 @@ void array_new_test(){
     arr = array_new();
     printf("%p\n",arr);
     printf("%d\n",arr->size);
+    printf("%d\n",arr->capacity);
     printf("%p\n",arr->data);
 }

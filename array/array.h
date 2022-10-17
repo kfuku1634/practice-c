@@ -3,6 +3,7 @@
 
 typedef struct MyArray {
     int size;
+    int capacity;
     int *data;
 }Array;
 #endif
