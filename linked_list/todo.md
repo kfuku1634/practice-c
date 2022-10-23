@@ -7,3 +7,4 @@
 - erase(i)
 - remove_value
 - ~~get(i)~~
+- ~~destroy~~

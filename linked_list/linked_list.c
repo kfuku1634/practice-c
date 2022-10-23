@@ -84,3 +84,16 @@ void linked_list_push(my_linked_list *linked_list, int num ){
 int linked_list_pop(my_linked_list *linked_list){
     return linked_list_remove(linked_list);
 }
+
+void linked_list_destroy(my_linked_list *linked_list){
+    my_node *node, *p;
+    node = linked_list->head;
+    if (linked_list->n == 0 ){ return; }
+    while(node->next_ptr != NULL){
+        p = node->next_ptr;
+        free(node);
+        node = p;
+    }
+    free(node);
+    return;
+}

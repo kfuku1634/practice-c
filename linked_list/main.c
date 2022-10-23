@@ -25,6 +25,7 @@ void test_new(){
     assert(linked_list->n == 0);
     assert(linked_list->head == NULL);
     assert(linked_list->tail == NULL);
+    linked_list_destroy(linked_list);
     return;
 }
 
@@ -63,6 +64,7 @@ void test_queue(){
     node = get_node(linked_list ,2);
     assert(node->data == 30);
 
+    linked_list_destroy(linked_list);
     return;
 }
 
@@ -86,5 +88,6 @@ void test_stack(){
 
     assert( linked_list_pop(linked_list) == 2 );
 
+    linked_list_destroy(linked_list);
     return;
 }
