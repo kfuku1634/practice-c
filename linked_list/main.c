@@ -5,7 +5,7 @@
 
 void run_all_tests();
 void test_new();
-void test_add();
+void test_queue();
 
 int main(){
     run_all_tests();
@@ -13,7 +13,7 @@ int main(){
 
 void run_all_tests(){
     test_new();
-    test_add();
+    test_queue();
     return;
 }
 
@@ -26,7 +26,7 @@ void test_new(){
     return;
 }
 
-void test_add(){
+void test_queue(){
     my_linked_list *linked_list;
     linked_list = linked_list_new();
 
@@ -45,5 +45,12 @@ void test_add(){
     node = get_node(linked_list ,1);
     assert(node->data == 10  );
     assert(node->next_ptr == NULL  );
+
+    assert( linked_list_remove(linked_list) == 5 );
+    assert(linked_list->n == 1);
+    node = get_node(linked_list ,0);
+    assert(node->data == 10);
+    assert(node->next_ptr == NULL);
+
     return;
 }

@@ -35,3 +35,15 @@ void linked_list_add(my_linked_list *linked_list, int add_num){
     linked_list->n++;
     return;
 }
+
+int linked_list_remove(my_linked_list *linked_list){
+    my_node *head_node;
+    int ret;
+
+    head_node = linked_list->head;
+    ret = head_node->data;
+    linked_list->n--;
+    linked_list->head = head_node->next_ptr;
+
+    return ret;
+}

@@ -1,7 +1,7 @@
 - ~~new~~
 - push
 - pop
-- remove
+- ~~remove~~
 - ~~add~~
 - insert(i,x)
 - erase(i)
