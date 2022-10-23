@@ -62,3 +62,21 @@ void linked_list_insert(my_linked_list *linked_list, int index, int insert_num){
 
     return;
 }
+
+void linked_list_push(my_linked_list *linked_list, int num ){
+    my_node *new_node, *head_node;
+    new_node = malloc(sizeof(my_node));
+    if ( linked_list->n == 0 ){
+        linked_list->head = new_node;
+        linked_list->tail = new_node;
+        new_node->next_ptr = NULL;
+    }
+    else{
+        head_node = linked_list->head;
+        linked_list->head = new_node;
+        new_node->next_ptr = head_node;
+    }
+    new_node->data = num;
+    linked_list->n++;
+    return;
+}
