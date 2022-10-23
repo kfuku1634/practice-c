@@ -30,15 +30,20 @@ void test_add(){
     my_linked_list *linked_list;
     linked_list = linked_list_new();
 
+    my_node *node;
+
     linked_list_add(linked_list, 5);
     assert(linked_list->n == 1);
-    assert(linked_list->head->data == 5);
-    assert(linked_list->head->next_ptr == NULL);
+    node = get_node(linked_list ,0);
+    assert(node->data == 5);
+    assert(node->next_ptr == NULL);
 
     linked_list_add(linked_list, 10);
     assert(linked_list->n == 2);
-    assert(linked_list->head->data == 5);
-    assert(linked_list->head->next_ptr->data == 10  );
-    assert(linked_list->head->next_ptr->next_ptr == NULL  );
+    node = get_node(linked_list ,0);
+    assert(node->data == 5);
+    node = get_node(linked_list ,1);
+    assert(node->data == 10  );
+    assert(node->next_ptr == NULL  );
     return;
 }

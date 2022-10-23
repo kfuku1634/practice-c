@@ -1,5 +1,15 @@
 #include <stdlib.h>
 
+my_node *get_node(my_linked_list *linked_list, int target_index){
+    my_node *node, *tmp_node;
+    int i;
+    node = linked_list->head;
+    for ( i = 0 ; i < target_index ; i++ ){
+        node = node->next_ptr;
+    }
+    return node;
+}
+
 my_linked_list *linked_list_new(){
     my_linked_list *linked_list;
     linked_list = malloc(sizeof(my_linked_list));
