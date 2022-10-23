@@ -4,7 +4,7 @@
 - ~~remove~~
 - ~~add~~
 - ~~insert(i,x)~~
-- erase(i)
+- ~~erase(i)~~
 - remove_value
 - ~~get(i)~~
 - ~~destroy~~

@@ -97,3 +97,12 @@ void linked_list_destroy(my_linked_list *linked_list){
     free(node);
     return;
 }
+
+void linked_list_erase(my_linked_list *linked_list, int index){
+    my_node *before_erase_node, *erase_node;
+    before_erase_node = get_node(linked_list, index-1);
+    erase_node = get_node(linked_list, index);
+    before_erase_node->next_ptr = erase_node->next_ptr;
+    free(erase_node);
+    return;
+}

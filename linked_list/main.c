@@ -64,6 +64,12 @@ void test_queue(){
     node = get_node(linked_list ,2);
     assert(node->data == 30);
 
+    linked_list_erase(linked_list, 1);
+    node = get_node(linked_list ,0);
+    assert(node->data == 10);
+    node = get_node(linked_list ,1);
+    assert(node->data == 30);
+
     linked_list_destroy(linked_list);
     return;
 }
