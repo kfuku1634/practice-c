@@ -1,6 +1,6 @@
 - ~~new~~
 - ~~push~~
-- pop
+- ~~pop~~
 - ~~remove~~
 - ~~add~~
 - ~~insert(i,x)~~

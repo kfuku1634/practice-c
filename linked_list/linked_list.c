@@ -80,3 +80,7 @@ void linked_list_push(my_linked_list *linked_list, int num ){
     linked_list->n++;
     return;
 }
+
+int linked_list_pop(my_linked_list *linked_list){
+    return linked_list_remove(linked_list);
+}

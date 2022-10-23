@@ -84,5 +84,7 @@ void test_stack(){
     node = get_node(linked_list, 1);
     assert( node->data == 1 );
 
+    assert( linked_list_pop(linked_list) == 2 );
+
     return;
 }
