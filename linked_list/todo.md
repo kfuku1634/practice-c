@@ -1,9 +1,9 @@
 - ~~new~~
-- **push**
+- push
 - pop
 - remove
-- add
+- ~~add~~
 - insert(i,x)
 - erase(i)
 - remove_value
-- get(i)
+- **get**(i)

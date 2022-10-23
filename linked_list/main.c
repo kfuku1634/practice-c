@@ -1,10 +1,11 @@
 #include <assert.h>
+#include <stdio.h>
 #include "linked_list.h"
 #include "linked_list.c"
 
 void run_all_tests();
 void test_new();
-void test_push();
+void test_add();
 
 int main(){
     run_all_tests();
@@ -12,7 +13,7 @@ int main(){
 
 void run_all_tests(){
     test_new();
-    test_push();
+    test_add();
     return;
 }
 
@@ -25,12 +26,19 @@ void test_new(){
     return;
 }
 
-void test_push(){
+void test_add(){
     my_linked_list *linked_list;
     linked_list = linked_list_new();
-    linked_list_push(linked_list, 5);
+
+    linked_list_add(linked_list, 5);
     assert(linked_list->n == 1);
     assert(linked_list->head->data == 5);
     assert(linked_list->head->next_ptr == NULL);
+
+    linked_list_add(linked_list, 10);
+    assert(linked_list->n == 2);
+    assert(linked_list->head->data == 5);
+    assert(linked_list->head->next_ptr->data == 10  );
+    assert(linked_list->head->next_ptr->next_ptr == NULL  );
     return;
 }
