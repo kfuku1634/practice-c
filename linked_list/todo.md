@@ -3,7 +3,7 @@
 - pop
 - ~~remove~~
 - ~~add~~
-- insert(i,x)
+- **insert(i,x)**
 - erase(i)
 - remove_value
 - ~~get(i)~~

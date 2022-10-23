@@ -47,3 +47,18 @@ int linked_list_remove(my_linked_list *linked_list){
 
     return ret;
 }
+
+void linked_list_insert(my_linked_list *linked_list, int index, int insert_num){
+    my_node *before_node, *new_node;
+    if (index==0){
+        linked_list_add(linked_list, insert_num);
+        return;
+    }
+    new_node = malloc(sizeof(my_node));
+    before_node = get_node(linked_list, index-1);
+    new_node->data = insert_num;
+    new_node->next_ptr = before_node->next_ptr;
+    before_node->next_ptr = new_node;
+
+    return;
+}

@@ -52,5 +52,14 @@ void test_queue(){
     assert(node->data == 10);
     assert(node->next_ptr == NULL);
 
+    linked_list_add(linked_list, 30);
+    linked_list_insert(linked_list, 1, 20);
+    node = get_node(linked_list ,0);
+    assert(node->data == 10);
+    node = get_node(linked_list ,1);
+    assert(node->data == 20);
+    node = get_node(linked_list ,2);
+    assert(node->data == 30);
+
     return;
 }
