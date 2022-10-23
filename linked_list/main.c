@@ -94,6 +94,19 @@ void test_stack(){
 
     assert( linked_list_pop(linked_list) == 2 );
 
+    linked_list_push(linked_list, 100);
+    linked_list_push(linked_list, 200);
+    linked_list_push(linked_list, 300);
+    node = get_node(linked_list, 2);
+    assert( node->data == 100 );
+    linked_list_rmval(linked_list, 100);
+    node = get_node(linked_list, 0);
+    assert( node->data == 300 );
+    node = get_node(linked_list, 1);
+    assert( node->data == 200 );
+    node = get_node(linked_list, 2);
+    assert( node->data == 1 );
+
     linked_list_destroy(linked_list);
     return;
 }

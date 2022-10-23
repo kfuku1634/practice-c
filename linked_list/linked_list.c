@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 my_node *get_node(my_linked_list *linked_list, int target_index){
@@ -105,4 +106,20 @@ void linked_list_erase(my_linked_list *linked_list, int index){
     before_erase_node->next_ptr = erase_node->next_ptr;
     free(erase_node);
     return;
+}
+
+void linked_list_rmval(my_linked_list *linked_list, int rmval){
+    my_node *node;
+    int count_index=0;
+    node = linked_list->head;
+    while (node->next_ptr != NULL)
+    {
+        if (node->data == rmval){
+            linked_list_erase(linked_list, count_index);
+            return;
+        }
+        node = node->next_ptr;
+        count_index++;
+    }
+   return; 
 }

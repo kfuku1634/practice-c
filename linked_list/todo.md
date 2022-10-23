@@ -5,6 +5,6 @@
 - ~~add~~
 - ~~insert(i,x)~~
 - ~~erase(i)~~
-- remove_value
+- ~~remove_value~~
 - ~~get(i)~~
 - ~~destroy~~
