@@ -1,0 +1,9 @@
+- ~~new~~
+- **push**
+- pop
+- remove
+- add
+- insert(i,x)
+- erase(i)
+- remove_value
+- get(i)

@@ -26,5 +26,11 @@ void test_new(){
 }
 
 void test_push(){
+    my_linked_list *linked_list;
+    linked_list = linked_list_new();
+    linked_list_push(linked_list, 5);
+    assert(linked_list->n == 1);
+    assert(linked_list->head->data == 5);
+    assert(linked_list->head->next_ptr == NULL);
     return;
 }
