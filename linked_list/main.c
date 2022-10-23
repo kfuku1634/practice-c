@@ -4,6 +4,7 @@
 
 void run_all_tests();
 void test_new();
+void test_push();
 
 int main(){
     run_all_tests();
@@ -11,6 +12,7 @@ int main(){
 
 void run_all_tests(){
     test_new();
+    test_push();
     return;
 }
 
@@ -20,5 +22,9 @@ void test_new(){
     assert(linked_list->n == 0);
     assert(linked_list->head == NULL);
     assert(linked_list->tail == NULL);
+    return;
+}
+
+void test_push(){
     return;
 }
